@@ -12,7 +12,7 @@ metadata:
 spec:
   replicas: {{ .Values.defaultBackend.replicaCount }}
   revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
-    selector:
+  selector:
     matchLabels:
       app: {{ template "nginx-ingress.name" . }}
       component: "{{ .Values.controller.name }}"
